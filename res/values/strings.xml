@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">OffOnB</string>
+    <string name="cd_img">image</string>
+    <string name="text_dummytext">Dummy text</string>
+    
+    <!-- Title Specific Strings -->
+    <string name="title_signin">Sign In</string>
+    
+    <!-- Watermark Specific Strings -->
+    <string name="text_watermark_name"><i>name</i></string>
+    <string name="text_watermark_email"><i>email</i></string>
+    <string name="text_watermark_password"><i>password</i></string>
+    <string name="text_watermark_phonenumber"><i>phonenumber</i></string>
+    
+    <!-- Action Button Specific Strings -->
+    <string name="text_button_signin">Sign In</string>
+    
+    <!-- Splash Specific Strings -->
+    <string name="text_splash_version">Version 1.0.0</string>
+    
+    <!-- Login Specific Strings -->
+    <string name="text_login_rememberme">Remember me</string>
+    <string name="text_login_forgotpwd">Forgot Password</string>
+    <string name="text_login_register">New user? Register here</string>
+    
+    <!-- Store Details Specific Strings -->
+    <string name="text_storedetails_username">Name</string>
+    <string name="text_storedetails_useremail">Email</string>
+    <string name="text_storedetails_usercontact">Contact</string>
+
+</resources>
