@@ -15,11 +15,12 @@ import android.util.Log;
 public class NetworkResponseHandler {
 	public static final String TAG = "Network Response Handler";
 
-	public static final Handler AUTHENTICATEUSER_HANDLER = authenticateUserHandler();
+	public static final Handler AUTHENTICATESTORE_HANDLER = authenticateStoreHandler();
+	public static final Handler REGISTERSTORE_HANDLER = registerStoreHandler();
 	public static final Handler BRANDS_HANDLER = brandsHandler();
 	public static final Handler CATEGORIES_HANDLER = categoriesHandler();
 	
-	private static Handler authenticateUserHandler() {
+	private static Handler authenticateStoreHandler() {
 		return new Handler() {
 			@Override
 			public void handleMessage(Message msg) {
@@ -69,6 +70,34 @@ public class NetworkResponseHandler {
 		return new Handler() {
 			@Override
 			public void handleMessage(Message msg) {
+			}
+
+		};
+	}
+	
+	private static Handler registerStoreHandler() {
+		return new Handler() {
+			@Override
+			public void handleMessage(Message msg) {
+				ConnectionModel model = AppEventsController.getInstance()
+						.getModelFacade().getConnModel();
+				switch (msg.what) {
+				case Constants.SUCCESSFUL_RESPONSE: {
+					UserModel userModel = AppEventsController
+							.getInstance().getModelFacade()
+							.getUserModel();
+					model.notifyView();
+				}
+					break;
+				case Constants.EXCEPTION: {
+					Exception exceptionObj = (Exception) msg.obj;
+					Log.d(TAG, "exception:" + exceptionObj.getMessage());
+					model.setConnectionStatus(ConnectionModel.ERROR);
+					model.setConnectionErrorMessage(exceptionObj.getMessage());
+					model.notifyView();
+				}
+					break;
+				}
 			}
 
 		};
