@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_background_color"
+    android:orientation="vertical" >
+
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/items_vertical_margin"
+        android:background="@color/blue_background_color"
+        android:paddingBottom="@dimen/items_vertical_padding"
+        android:paddingTop="@dimen/items_vertical_padding" >
+
+        <LinearLayout
+            android:id="@+id/relativelayout_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center_horizontal" >
+
+            <TextView
+                android:id="@+id/button_cancel"
+                style="@style/commonActionButtonStyle"
+                android:drawableLeft="@drawable/ic_action_content_remove"
+                android:text="@string/text_addbrand_cancel" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#ffffff" />
+
+        <LinearLayout
+            android:id="@+id/relativelayout_apply"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center_horizontal" >
+
+            <TextView
+                android:id="@+id/button_apply"
+                style="@style/commonActionButtonStyle"
+                android:drawableLeft="@drawable/ic_action_navigation_accept"
+                android:text="@string/text_addbrand_done" />
+
+        </LinearLayout>
+        
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#ffffff" />
+
+        <LinearLayout
+            android:id="@+id/relativelayout_add"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center_horizontal" >
+
+            <TextView
+                android:id="@+id/button_add"
+                style="@style/commonActionButtonStyle"
+                android:drawableLeft="@drawable/ic_content_new"
+                android:text="@string/text_addbrand_add" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textview_addbrand_brands"
+        style="@style/commonH1TextViewStyle"
+        android:text="@string/text_addbrand_brands" />
+
+    <ListView
+        android:id="@+id/listView_addbrand_brands"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawSelectorOnTop="true" >
+    </ListView>
+
+</LinearLayout>

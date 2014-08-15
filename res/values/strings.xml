@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">OffOnB</string>
+    <string name="cd_img">image</string>
+    <string name="text_dummytext">Dummy text</string>
+    
+    <!-- Title Specific Strings -->
+    <string name="title_signin">Sign In</string>
+    <string name="text_title_register">Register</string>
+    
+    <!-- Watermark Specific Strings -->
+    <string name="text_watermark_name"><i>name</i></string>
+    <string name="text_watermark_email"><i>email</i></string>
+    <string name="text_watermark_password"><i>password</i></string>
+    <string name="text_watermark_phonenumber"><i>phonenumber</i></string>
+    <string name="text_watermark_storename"><i>store name</i></string>
+    <string name="text_watermark_storeaddress"><i>address</i></string>
+    <string name="text_watermark_storecity"><i>city</i></string>
+    <string name="text_watermark_storestate"><i>state</i></string>
+    <string name="text_watermark_storecountry"><i>country</i></string>
+    
+    <!-- Action Button Specific Strings -->
+    <string name="text_button_signin">Sign In</string>
+    <string name="text_button_submit">Submit</string>
+    
+    <!-- Splash Specific Strings -->
+    <string name="text_splash_version">Version 1.0.0</string>
+    
+    <!-- Login Specific Strings -->
+    <string name="text_login_rememberme">Remember me</string>
+    <string name="text_login_forgotpwd">Forgot Password</string>
+    <string name="text_login_register">New user? Register here</string>
+    
+    <!-- Signup Specific Strings -->
+    <string name="text_signup_storedetails">Store Details</string>
+    <string name="text_signup_addbrands"><u>ADD BRANDS</u></string>
+    <string name="text_signup_addcategories"><u>ADD CATEGORIES</u></string>
+    <string name="text_signup_storecontactdetails">Contact Details</string>
+    
+    <!-- Store Details Specific Strings -->
+    <string name="text_storedetails_username">Name</string>
+    <string name="text_storedetails_useremail">Email</string>
+    <string name="text_storedetails_usercontact">Contact</string>
+    
+    <!-- Home Specific Strings -->
+    <string-array name="home_tabs_array">
+        <item>Info</item>
+        <item>History</item>
+        <item>Collections</item>
+        <item>Reviews</item>
+    </string-array>
+    <string name="text_home_edit_menu">Edit</string>
+    
+    <!-- Add Brands Specific Strings -->
+    <string name="text_addbrand_add">Add</string>
+    <string name="text_addbrand_done">Done</string>
+	<string name="text_addbrand_cancel">Cancel</string>
+	<string name="text_addbrand_brands">Brands</string>
+	
+	<!-- Add Categories Specific Strings -->
+	<string name="text_addcategories_done">Done</string>
+    <string name="text_addcategories_add">Add</string>
+	<string name="text_addcategories_cancel">Cancel</string>
+	<string name="text_addcategories_category">Categories</string>
+
+</resources>
