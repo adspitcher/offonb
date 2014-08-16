@@ -470,6 +470,7 @@ int id action_context_bar 0x7f08002f
 int id action_menu_divider 0x7f080028
 int id action_menu_presenter 0x7f080029
 int id action_mode_close_button 0x7f080036
+int id action_post 0x7f080099
 int id action_post_offer 0x7f080098
 int id activity_chooser_view_content 0x7f080037
 int id always 0x7f08001e
@@ -656,6 +657,7 @@ int layout item_offer 0x7f030026
 int layout item_review 0x7f030027
 int layout support_simple_spinner_dropdown_item 0x7f030028
 int menu activity_menu_home 0x7f0d0000
+int menu activity_menu_postoffer 0x7f0d0001
 int string abc_action_bar_home_description 0x7f060021
 int string abc_action_bar_up_description 0x7f060022
 int string abc_action_menu_overflow_description 0x7f060023

@@ -2,7 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    android:background="@color/background_color" >
     
     <TextView
         android:id="@+id/textview_upload_image"
@@ -57,14 +58,14 @@
             style="@style/commonH1TextViewStyle"
             android:layout_width="wrap_content"
             android:clickable="true"
-            android:text="@string/text_signup_addbrands" />
+            android:text="@string/text_postoffer_addbrands" />
 
         <TextView
             android:id="@+id/link_add_categories"
             style="@style/commonH1TextViewStyle"
             android:layout_width="wrap_content"
             android:clickable="true"
-            android:text="@string/text_signup_addcategories" />
+            android:text="@string/text_postoffer_addcategories" />
 
     </LinearLayout>
 
