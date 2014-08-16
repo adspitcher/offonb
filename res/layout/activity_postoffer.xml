@@ -28,7 +28,6 @@
         android:id="@+id/edittext_offer_startdate"
         style="@style/commonEditTextStyle"
         android:drawableRight="@drawable/ic_calendar_small"
-        android:ems="10"
         android:hint="@string/text_postoffer_start_date"
         android:inputType="date" />
     
@@ -36,7 +35,6 @@
         android:id="@+id/edittext_offer_enddate"
         style="@style/commonEditTextStyle"
         android:drawableRight="@drawable/ic_calendar_small"
-        android:ems="10"
         android:hint="@string/text_postoffer_end_date"
         android:inputType="date" />
 
