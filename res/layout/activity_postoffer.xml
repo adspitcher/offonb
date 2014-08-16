@@ -4,5 +4,68 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
     
+    <TextView
+        android:id="@+id/textview_upload_image"
+        style="@style/commonDetailsh2TextViewStyle"
+        android:layout_width="match_parent"
+        android:drawableLeft="@drawable/ic_upload_picture"
+        android:gravity="center_vertical"
+        android:text="@string/text_postoffer_upload_image" />
+
+    <EditText
+        android:id="@+id/edittext_offer_description"
+        style="@style/commonEditTextStyle"
+        android:drawableRight="@drawable/ic_description"
+        android:ems="10"
+        android:hint="@string/text_postoffer_offer_description"
+        android:inputType="textMultiLine" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/edittext_offer_startdate"
+        style="@style/commonEditTextStyle"
+        android:drawableRight="@drawable/ic_calendar_small"
+        android:ems="10"
+        android:hint="@string/text_postoffer_start_date"
+        android:inputType="date" />
+    
+    <EditText
+        android:id="@+id/edittext_offer_enddate"
+        style="@style/commonEditTextStyle"
+        android:drawableRight="@drawable/ic_calendar_small"
+        android:ems="10"
+        android:hint="@string/text_postoffer_end_date"
+        android:inputType="date" />
+
+    <EditText
+        android:id="@+id/edittext_offer_discount"
+        style="@style/commonEditTextStyle"
+        android:drawableRight="@drawable/ic_percent_sign"
+        android:ems="10"
+        android:hint="@string/text_postoffer_discount"
+        android:inputType="numberSigned" />
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal" >
+
+        <TextView
+            android:id="@+id/link_add_brands"
+            style="@style/commonH1TextViewStyle"
+            android:layout_width="wrap_content"
+            android:clickable="true"
+            android:text="@string/text_signup_addbrands" />
+
+        <TextView
+            android:id="@+id/link_add_categories"
+            style="@style/commonH1TextViewStyle"
+            android:layout_width="wrap_content"
+            android:clickable="true"
+            android:text="@string/text_signup_addcategories" />
+
+    </LinearLayout>
 
 </LinearLayout>

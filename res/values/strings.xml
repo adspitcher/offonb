@@ -8,6 +8,7 @@
     <!-- Title Specific Strings -->
     <string name="title_signin">Sign In</string>
     <string name="text_title_register">Register</string>
+    <string name="text_title_post_offer">Post Offer</string>
     
     <!-- Watermark Specific Strings -->
     <string name="text_watermark_name"><i>name</i></string>
@@ -51,6 +52,7 @@
         <item>Reviews</item>
     </string-array>
     <string name="text_home_edit_menu">Edit</string>
+    <string name="text_home_postoffer_menu">Post Offer</string>
     
     <!-- Add Brands Specific Strings -->
     <string name="text_addbrand_add">Add</string>
@@ -63,5 +65,15 @@
     <string name="text_addcategories_add">Add</string>
 	<string name="text_addcategories_cancel">Cancel</string>
 	<string name="text_addcategories_category">Categories</string>
+	
+	<!-- Post Offer Specific Strings -->
+	<string name="text_postoffer_post">Post</string>
+	<string name="text_postoffer_upload_image">tap to upload image</string>
+	<string name="text_postoffer_offer_description"><i>description</i></string>
+	<string name="text_postoffer_start_date"><i>start date</i></string>
+	<string name="text_postoffer_end_date"><i>end date</i></string>
+	<string name="text_postoffer_discount"><i>discount</i></string>
+	<string name="text_postoffer_addbrands"><u>ADD BRANDS</u></string>
+    <string name="text_postoffer_addcategories"><u>ADD CATEGORIES</u></string>
 
 </resources>

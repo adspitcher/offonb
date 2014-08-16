@@ -41,6 +41,7 @@ public class SignupActivity extends ActionBarActivity{
 				SignupActivity.this.startActivity(screenChangeIntent);
 			}
 		});
+		
 	}
 
 }

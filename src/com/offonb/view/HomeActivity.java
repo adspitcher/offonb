@@ -1,16 +1,20 @@
 package com.offonb.view;
 
-import com.offonb.R;
-import com.offonb.adapters.HomePagerAdapter;
-
+import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
-import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar.Tab;
+import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
 import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+
+import com.offonb.R;
+import com.offonb.adapters.HomePagerAdapter;
 
 public class HomeActivity extends ActionBarActivity implements
 ActionBar.TabListener{
@@ -18,7 +22,6 @@ ActionBar.TabListener{
 	private ViewPager viewPager;
 	private ActionBar actionBar;
 	private HomePagerAdapter mAdapter;
-	private Menu homeMenu;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -82,6 +85,36 @@ ActionBar.TabListener{
 	public void onTabUnselected(Tab tab, FragmentTransaction arg1) {
 		// TODO Auto-generated method stub
 
+	}
+	
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.activity_menu_home, menu);
+   
+        return super.onCreateOptionsMenu(menu);
+	}
+	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		Log.d("Search View","Inside Options Selected");
+		// The action bar home/up action should open or close the drawer.
+        // ActionBarDrawerToggle will take care of this.
+       if (super.onOptionsItemSelected(item)) {
+           return true;
+       }
+		// Handle presses on the action bar items
+		switch (item.getItemId()) {
+		case R.id.action_post_offer: {
+			Intent screenChangeIntent = null;
+			screenChangeIntent = new Intent(HomeActivity.this,
+					PostOfferActivity.class);
+			HomeActivity.this.startActivity(screenChangeIntent);
+			return true;
+		}
+		default:
+			return super.onOptionsItemSelected(item);
+		}
 	}
 
 }

@@ -37,6 +37,12 @@
         </activity>
         <activity android:name=".view.AddBrandsActivity"></activity>
         <activity android:name=".view.AddCategoriesActivity"></activity>
+        <activity android:name=".view.PostOfferActivity"
+            android:label="@string/text_title_post_offer"
+            android:parentActivityName=".view.HomeActivity">
+            <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".view.HomeActivity" /></activity>
     </application>
 
 </manifest>
