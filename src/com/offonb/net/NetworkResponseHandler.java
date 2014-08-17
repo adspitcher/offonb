@@ -1,16 +1,22 @@
 package com.offonb.net;
 
+import org.json.JSONArray;
 import org.json.JSONObject;
 
+import com.offonb.R;
 import com.offonb.constants.Constants;
 import com.offonb.controllers.AppEventsController;
+import com.offonb.defines.NetworkEvents;
 import com.offonb.exceptions.ApplicationException;
 import com.offonb.models.ConnectionModel;
+import com.offonb.models.LocalModel;
 import com.offonb.models.UserModel;
 
+import android.app.Activity;
 import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
+import android.widget.TextView;
 
 public class NetworkResponseHandler {
 	public static final String TAG = "Network Response Handler";
@@ -39,7 +45,7 @@ public class NetworkResponseHandler {
 							e.printStackTrace();
 						}
 						model.setConnectionStatus(ConnectionModel.SUCCESS);
-					model.notifyView();
+					model.notifyView("Login");
 				}
 					break;
 				case Constants.EXCEPTION: {
@@ -47,7 +53,7 @@ public class NetworkResponseHandler {
 					Log.d(TAG, "exception:" + exceptionObj.getMessage());
 					model.setConnectionStatus(ConnectionModel.ERROR);
 					model.setConnectionErrorMessage(exceptionObj.getMessage());
-					model.notifyView();
+					model.notifyView("Error");
 				}
 					break;
 				}
@@ -60,7 +66,38 @@ public class NetworkResponseHandler {
 		return new Handler() {
 			@Override
 			public void handleMessage(Message msg) {
-				
+				ConnectionModel connmodel = AppEventsController.getInstance()
+						.getModelFacade().getConnModel();
+				switch (msg.what) {
+				case Constants.SUCCESSFUL_RESPONSE: {
+					JSONArray response = (JSONArray)msg.obj; 
+					Log.d("response==", response.toString());
+					LocalModel localModel = AppEventsController
+							.getInstance().getModelFacade()
+							.getLocalModel();
+					try {
+						if( response.length() > 0 ){
+							localModel.setBrands(response);
+						}else{
+							connmodel.setConnectionStatus(ConnectionModel.ERROR);
+							connmodel.setConnectionErrorMessage("No Data Found.");
+						}
+					} catch (ApplicationException appEx) {
+						// TODO Auto-generated catch block
+						appEx.printStackTrace();
+					}
+					connmodel.notifyView("Brands");
+				}
+					break;
+				case Constants.EXCEPTION: {
+					Exception exceptionObj = (Exception) msg.obj;
+					Log.d(TAG, "exception:" + exceptionObj.getMessage());
+					connmodel.setConnectionStatus(ConnectionModel.ERROR);
+					connmodel.setConnectionErrorMessage(exceptionObj.getMessage());
+					connmodel.notifyView("Error");
+				}
+					break;
+				}
 			}
 
 		};
@@ -70,6 +107,38 @@ public class NetworkResponseHandler {
 		return new Handler() {
 			@Override
 			public void handleMessage(Message msg) {
+				ConnectionModel connmodel = AppEventsController.getInstance()
+						.getModelFacade().getConnModel();
+				switch (msg.what) {
+				case Constants.SUCCESSFUL_RESPONSE: {
+					JSONArray response = (JSONArray)msg.obj; 
+					Log.d("response==", response.toString());
+					LocalModel localModel = AppEventsController
+							.getInstance().getModelFacade()
+							.getLocalModel();
+					try {
+						if( response.length() > 0 ){
+							localModel.setCategories(response);
+						}else{
+							connmodel.setConnectionStatus(ConnectionModel.ERROR);
+							connmodel.setConnectionErrorMessage("No Data Found.");
+						}
+					} catch (ApplicationException appEx) {
+						// TODO Auto-generated catch block
+						appEx.printStackTrace();
+					}
+					connmodel.notifyView("Categories");
+				}
+					break;
+				case Constants.EXCEPTION: {
+					Exception exceptionObj = (Exception) msg.obj;
+					Log.d(TAG, "exception:" + exceptionObj.getMessage());
+					connmodel.setConnectionStatus(ConnectionModel.ERROR);
+					connmodel.setConnectionErrorMessage(exceptionObj.getMessage());
+					connmodel.notifyView("Error");
+				}
+					break;
+				}
 			}
 
 		};
@@ -86,7 +155,7 @@ public class NetworkResponseHandler {
 					UserModel userModel = AppEventsController
 							.getInstance().getModelFacade()
 							.getUserModel();
-					model.notifyView();
+					model.notifyView("Register");
 				}
 					break;
 				case Constants.EXCEPTION: {
@@ -94,7 +163,7 @@ public class NetworkResponseHandler {
 					Log.d(TAG, "exception:" + exceptionObj.getMessage());
 					model.setConnectionStatus(ConnectionModel.ERROR);
 					model.setConnectionErrorMessage(exceptionObj.getMessage());
-					model.notifyView();
+					model.notifyView("Error");
 				}
 					break;
 				}

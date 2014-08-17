@@ -52,12 +52,12 @@ public class BaseModel {
 	/**
 	 * Notify view which should be updated.
 	 */
-	public void notifyView() {
+	public void notifyView(String tag) {
 		int viewsCount = registeredView.size();
 		ActivityUpdateListener view = null;
 		for (int i = 0; i < viewsCount; i++) {
 			view = (ActivityUpdateListener) registeredView.elementAt(i);
-			view.updateActivity();
+			view.updateActivity(tag);
 		}
 	}
 	// --------------------------------------------------------------------------------------------

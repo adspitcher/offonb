@@ -3,7 +3,6 @@ package com.offonb.controllers;
 import com.offonb.defines.NetworkEvents;
 import com.offonb.models.ModelFacade;
 import com.offonb.net.NetworkResponseHandler;
-import com.offonb.view.UpdateListener;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -20,7 +19,6 @@ public class AppEventsController {
 	 * ModelFacade Reference
 	 */
 	private ModelFacade modelFacade;
-	private UpdateListener activityUpdateListener;
 
 	// ---------------------------------------------------------------------------------
 
@@ -29,7 +27,6 @@ public class AppEventsController {
 	 */
 	private AppEventsController() {
 		modelFacade = new ModelFacade();
-		activityUpdateListener = new UpdateListener();
 	}
 
 	// ---------------------------------------------------------------------------------
@@ -73,10 +70,6 @@ public class AppEventsController {
 	}
 
 	// ---------------------------------------------------------------------------------
-
-	public UpdateListener getActivityUpdateListener() {
-		return activityUpdateListener;
-	}
 
 	/**
 	 * Method to actually handle events

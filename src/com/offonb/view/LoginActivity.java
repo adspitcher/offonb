@@ -215,22 +215,32 @@ public class LoginActivity extends ActionBarActivity implements ActivityUpdateLi
 	}
 
 	@Override
-	public void updateActivity() {
+	public void updateActivity(String tag) {
 		switch (connModel.getConnectionStatus()) {
 		case ConnectionModel.SUCCESS: {
 			Log.d("LoginActivity", "Inside onConnection");
-
-			if (keepMeLoggedInBool) {
-				SharedPreferences sharedPref = getSharedPreferences(
-						Constants.DATABASE_PREF_NAME, MODE_PRIVATE);
-				SharedPreferences.Editor editor = sharedPref.edit();
-				editor.putString(Constants.TEXT_ACCESSTOKEN, AppEventsController
-						.getInstance().getModelFacade().getUserModel()
-						.getAccessToken());
-				editor.commit();
+			if(tag.equals("Brands")){
+				AppEventsController.getInstance().handleEvent(NetworkEvents.EVENT_ID_GET_CATEGORIES,
+						 null, btn_signin);
+			}else if(tag.equals("Categories")){
+				
+			}else if(tag.equals("Login")){
+				if (keepMeLoggedInBool) {
+					SharedPreferences sharedPref = getSharedPreferences(
+							Constants.DATABASE_PREF_NAME, MODE_PRIVATE);
+					SharedPreferences.Editor editor = sharedPref.edit();
+					editor.putString(Constants.TEXT_ACCESSTOKEN, AppEventsController
+							.getInstance().getModelFacade().getUserModel()
+							.getAccessToken());
+					editor.commit();
+				}
+				connModel.unregisterView(this);
+				Intent screenChangeIntent = null;
+				screenChangeIntent = new Intent(LoginActivity.this,
+						HomeActivity.class);
+				LoginActivity.this.startActivity(screenChangeIntent);
+				LoginActivity.this.finish();
 			}
-			connModel.unregisterView(this);
-			LoginActivity.this.finish();
 		}
 			break;
 		case ConnectionModel.ERROR: {

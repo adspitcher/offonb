@@ -4,5 +4,5 @@ public interface ActivityUpdateListener {
 	/**
 	 * Method to update activity
 	 */
-	public void updateActivity();
+	public void updateActivity(String tag);
 }
