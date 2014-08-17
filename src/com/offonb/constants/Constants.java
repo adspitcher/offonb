@@ -14,6 +14,13 @@ public class Constants {
 		public static final String OAUTH_CLIENT_SECRET = "f0834b7f5eca772ad848ee40b9ca71a7b11ad3d24fe44988feeca10d33eb4a48";
 		// ----------------------------------------------------------------------------------
 		
+		/**
+	     * Shared Preference Name
+	     */
+	    public static final String DATABASE_PREF_NAME = "offonbLoginPrefName";
+	    public static final String TEXT_DATABASE_ACCESS_VALUE_DEFAULT = "DatabaseKeyDoesNotExist";
+	    //--------------------------------------------------------------------
+		
 		// Response Handling Constants
 		public static final int SUCCESSFUL_RESPONSE = 0;
 		public static final int ERROR = 1;
