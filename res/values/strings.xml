@@ -4,11 +4,15 @@
     <string name="app_name">OffOnB</string>
     <string name="cd_img">image</string>
     <string name="text_dummytext">Dummy text</string>
+    <string name="error">Error</string>
+    <string name="success">Success</string>
+    <string name="OK">OK</string>
     
     <!-- Title Specific Strings -->
     <string name="title_signin">Sign In</string>
     <string name="text_title_register">Register</string>
     <string name="text_title_post_offer">Post Offer</string>
+    <string name="text_title_forgot_pwd">Forgot Password</string>
     
     <!-- Watermark Specific Strings -->
     <string name="text_watermark_name"><i>name</i></string>
@@ -32,6 +36,7 @@
     <string name="text_login_rememberme">Remember me</string>
     <string name="text_login_forgotpwd">Forgot Password</string>
     <string name="text_login_register">New user? Register here</string>
+    <string name="text_login_forgotpwd_details">An email with instructions to reset password has been sent to your registered email address. Please follow the instructions in email to reset your password.</string>
     
     <!-- Signup Specific Strings -->
     <string name="text_signup_storedetails">Store Details</string>

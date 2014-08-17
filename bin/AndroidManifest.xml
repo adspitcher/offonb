@@ -43,6 +43,13 @@
             <meta-data
             android:name="android.support.PARENT_ACTIVITY"
             android:value=".view.HomeActivity" /></activity>
+        <activity android:name=".view.ForgotPwdActivity"
+            android:label="@string/text_title_forgot_pwd"
+            android:parentActivityName=".view.LoginActivity">
+            <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".view.LoginActivity" />
+        </activity>
     </application>
 
 </manifest>

@@ -37,5 +37,9 @@ public class Constants {
 		public static final String TEXT_ACCESSTOKEN = "access_token";
 		public static final String TEXT_TOKEN_TYPE = "token_type";
 		public static final String TEXT_EXPIRES_IN = "expires_in";
-
+		public static final String TEXT_GRANT_TYPE = "grant_type";
+		public static final String TEXT_USERNAME = "username";
+		public static final String TEXT_PASSWORD = "password";
+		public static final String TEXT_CLIENT_ID = "client_id";
+		public static final String TEXT_CLIENT_SECRET = "client_secret"; 
 }
