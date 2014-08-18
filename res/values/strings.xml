@@ -15,15 +15,15 @@
     <string name="text_title_forgot_pwd">Forgot Password</string>
     
     <!-- Watermark Specific Strings -->
-    <string name="text_watermark_name"><i>name</i></string>
-    <string name="text_watermark_email"><i>email</i></string>
-    <string name="text_watermark_password"><i>password</i></string>
-    <string name="text_watermark_phonenumber"><i>phonenumber</i></string>
-    <string name="text_watermark_storename"><i>store name</i></string>
-    <string name="text_watermark_storeaddress"><i>address</i></string>
-    <string name="text_watermark_storecity"><i>city</i></string>
-    <string name="text_watermark_storestate"><i>state</i></string>
-    <string name="text_watermark_storecountry"><i>country</i></string>
+    <string name="text_watermark_name"><i>name*</i></string>
+    <string name="text_watermark_email"><i>email*</i></string>
+    <string name="text_watermark_password"><i>password*</i></string>
+    <string name="text_watermark_phonenumber"><i>phonenumber*</i></string>
+    <string name="text_watermark_storename"><i>store name*</i></string>
+    <string name="text_watermark_storeaddress"><i>address*</i></string>
+    <string name="text_watermark_storecity"><i>city*</i></string>
+    <string name="text_watermark_storestate"><i>state*</i></string>
+    <string name="text_watermark_storecountry"><i>country*</i></string>
     
     <!-- Action Button Specific Strings -->
     <string name="text_button_signin">Sign In</string>
