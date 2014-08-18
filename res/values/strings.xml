@@ -74,10 +74,10 @@
 	<!-- Post Offer Specific Strings -->
 	<string name="text_postoffer_post">Post</string>
 	<string name="text_postoffer_upload_image">tap to upload image</string>
-	<string name="text_postoffer_offer_description"><i>description</i></string>
-	<string name="text_postoffer_start_date"><i>start date</i></string>
-	<string name="text_postoffer_end_date"><i>end date</i></string>
-	<string name="text_postoffer_discount"><i>discount</i></string>
+	<string name="text_postoffer_offer_description"><i>description*</i></string>
+	<string name="text_postoffer_start_date"><i>start date*</i></string>
+	<string name="text_postoffer_end_date"><i>end date*</i></string>
+	<string name="text_postoffer_discount"><i>discount*</i></string>
 	<string name="text_postoffer_addbrands"><u>ADD BRANDS</u></string>
     <string name="text_postoffer_addcategories"><u>ADD CATEGORIES</u></string>
 
