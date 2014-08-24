@@ -20,6 +20,20 @@ public class Constants {
 	    public static final String DATABASE_PREF_NAME = "offonbLoginPrefName";
 	    public static final String TEXT_DATABASE_ACCESS_VALUE_DEFAULT = "DatabaseKeyDoesNotExist";
 	    //--------------------------------------------------------------------
+	    
+	    //Google Spreadsheets Details
+	    public static final String GOOGLE_ACCOUNT_USERNAME = "rachnakhokhar@gmail.com";
+	    public static final String GOOGLE_ACCOUNT_PASSWORD = "rach18febprash";
+	    public static final String SPREADSHEET_REGISTER_BUSINESSUSER = "datamanager_offonb";
+	    public static final String SPREADSHEET_REGISTER_STORE_NAME = "Name";
+	    public static final String SPREADSHEET_REGISTER_STORE_ADDRESS = "Address";
+	    public static final String SPREADSHEET_REGISTER_STORE_COUNTRY = "Country";
+	    public static final String SPREADSHEET_REGISTER_STORE_STATE = "State";
+	    public static final String SPREADSHEET_REGISTER_STORE_CITY = "City";
+	    public static final String SPREADSHEET_REGISTER_BUSINESSUSER_NAME = "Username";
+	    public static final String SPREADSHEET_REGISTER_BUSINESSUSER_EMAIL = "Useremail";
+	    public static final String SPREADSHEET_REGISTER_BUSINESSUSER_PHONENUMBER = "Userphonenumber";
+	  //--------------------------------------------------------------------
 		
 		// Response Handling Constants
 		public static final int SUCCESSFUL_RESPONSE = 0;
